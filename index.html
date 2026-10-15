@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shivam Print Zone — PDF और फोटो प्रिंटिंग के लिए सरल ऑनलाइन सुविधा।">
+<title>Shivam Print Zone | Online Print Desk</title>
+<style>
+:root{--navy:#102a43;--blue:#1769aa;--sky:#eaf4ff;--ink:#18212b;--muted:#627184;--line:#d9e2ec;--green:#147d55}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--ink);background:#f5f8fc;line-height:1.5}
+header{background:linear-gradient(120deg,#102a43,#1769aa);color:white;padding:24px 18px 34px}
+.wrap{max-width:1000px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:14px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:23px;font-weight:800;box-shadow:0 5px 18px #071a2b33}
+h1{font-size:clamp(25px,4vw,38px);margin:0}.tag{margin:8px 0 0;color:#e5f2ff}
+nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}nav a{color:white;text-decoration:none;border:1px solid #ffffff66;padding:7px 12px;border-radius:999px;font-size:14px}
+main{max-width:1000px;margin:-16px auto 0;padding:0 16px 32px}.notice{background:#fff7dc;border:1px solid #f1d27b;color:#694e00;padding:12px 14px;border-radius:12px;font-size:14px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 8px 24px #102a4309}h2{font-size:21px;margin:0 0 14px;color:var(--navy)}label{display:block;font-weight:700;font-size:14px;margin:13px 0 6px}input,select,button{font:inherit}input[type=file],input[type=number],select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}input[type=checkbox]{width:auto}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.price{background:var(--sky);border-radius:12px;padding:15px;margin-top:16px}.price strong{font-size:28px;color:var(--blue)}.btn{display:inline-block;background:var(--blue);color:white;border:0;border-radius:11px;padding:12px 16px;font-weight:700;cursor:pointer;text-decoration:none}.btn.secondary{background:#eaf0f6;color:var(--navy)}.btn:disabled{opacity:.45;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.small{font-size:13px;color:var(--muted)}.status{margin-top:12px;color:var(--green);font-weight:700;overflow-wrap:anywhere}.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.tool{background:#f6f9fc;border:1px solid var(--line);border-radius:12px;padding:13px}.tool b{display:block;color:var(--navy)}.preview{width:100%;height:300px;border:1px dashed #b8c8d8;border-radius:12px;background:#f8fbff;display:grid;place-items:center;overflow:hidden;color:var(--muted);margin-top:12px}.preview iframe{width:100%;height:100%;border:0}.preview img{max-width:100%;max-height:100%;object-fit:contain}footer{text-align:center;color:var(--muted);font-size:13px;padding:18px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><div class="logo">SPZ</div><div><h1>Shivam Print Zone</h1><p class="tag">आपके डॉक्यूमेंट और फोटो प्रिंटिंग का आसान डेस्क</p></div></div>
+  <nav><a href="#print">Print Order</a><a href="#tools">Print Tools</a><a href="#about">About</a></nav>
+</div></header>
+<main>
+  <div class="notice"><b>डेमो वेबसाइट:</b> अभी यह फाइल आपके ब्राउज़र में काम करती है। इसमें असली ऑनलाइन अपलोड/ऑर्डर सर्वर, पेमेंट या स्वतः फाइल डिलीट सिस्टम जुड़ा नहीं है। ग्राहकों के असली दस्तावेज़ इस डेमो पर न मँगाएँ।</div>
+  <div class="grid">
+    <section class="card" id="print">
+      <h2>📄 अपना डॉक्यूमेंट चुनें</h2>
+      <label for="file">PDF या फोटो चुनें</label><input id="file" type="file" accept=".pdf,image/*">
+      <div class="row">
+        <div><label for="kind">प्रिंट का प्रकार</label><select id="kind"><option value="bw">Black & White</option><option value="color">Colour</option></select></div>
+        <div><label for="side">प्रिंट साइड</label><select id="side"><option value="single">Single side</option><option value="double">Double side (अनुमान)</option></select></div>
+      </div>
+      <div class="row">
+        <div><label for="pages">कुल पेज</label><input id="pages" type="number" min="1" value="1"></div>
+        <div><label for="copies">कॉपी</label><input id="copies" type="number" min="1" value="1"></div>
+      </div>
+      <div class="row">
+        <div><label for="bwprice">B&W रेट / पेज (₹)</label><input id="bwprice" type="number" min="0" step="0.5" value="2"></div>
+        <div><label for="colorprice">Colour रेट / पेज (₹)</label><input id="colorprice" type="number" min="0" step="0.5" value="5"></div>
+      </div>
+      <div class="price">अनुमानित कुल कीमत <br><strong id="total">₹2.00</strong><div class="small">यह कीमत तुम्हारे भरे हुए रेट के आधार पर है।</div></div>
+      <div class="actions"><button class="btn" id="printBtn" disabled>चुनी हुई फाइल प्रिंट करें</button><button class="btn secondary" id="clearBtn" type="button">फाइल हटाएँ</button></div>
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="preview" id="preview">फाइल चुनने पर उसका प्रीव्यू यहाँ दिखेगा।</div>
+      <p class="small">नोट: प्रिंट बटन ब्राउज़र के प्रिंट डायलॉग को खोलता है। PDF/फोटो का सही पेज-काउंट इस डेमो में अपने आप नहीं निकाला जाता; पेज संख्या जाँचकर भरें।</p>
+    </section>
+    <aside class="card" id="tools">
+      <h2>🧰 प्रिंटिंग टूल्स</h2>
+      <div class="tools">
+        <div class="tool"><b>PDF Print</b><span class="small">PDF चुनें और प्रिंट करें</span></div>
+        <div class="tool"><b>Photo Print</b><span class="small">फोटो का प्रीव्यू</span></div>
+        <div class="tool"><b>Rate Calculator</b><span class="small">पेज × कॉपी के हिसाब से</span></div>
+        <div class="tool"><b>Order Desk</b><span class="small">अगले चरण में सर्वर जोड़ा जा सकता है</span></div>
+      </div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+      <h2 id="about">ℹ️ Shivam Print Zone</h2>
+      <p>यह तुम्हारी वेबसाइट का शुरुआती रूप है। यहाँ बाद में तुम्हारा असली लोगो, फोटो, मोबाइल नंबर, दुकान का पता और दूसरे टूल जोड़े जा सकते हैं।</p>
+      <p class="small">सुरक्षा: ग्राहकों की PDF/ID जैसी निजी फाइलें किसी सार्वजनिक GitHub repository में कभी अपलोड न करें।</p>
+    </aside>
+  </div>
+</main>
+<footer>© <span id="year"></span> Shivam Print Zone · शुरुआती डेमो</footer>
+<script>
+const $=id=>document.getElementById(id);let objectUrl=null;
+function calc(){const pages=Math.max(1,Number($('pages').value)||1),copies=Math.max(1,Number($('copies').value)||1),rate=$('kind').value==='color'?Number($('colorprice').value)||0:Number($('bwprice').value)||0;$('total').textContent='₹'+(pages*copies*rate).toFixed(2)}
+['kind','pages','copies','bwprice','colorprice','side'].forEach(id=>$(id).addEventListener('input',calc));
+$('file').addEventListener('change',()=>{const f=$('file').files[0];$('status').textContent='';$('printBtn').disabled=!f;if(objectUrl)URL.revokeObjectURL(objectUrl);if(!f){$('preview').textContent='फाइल चुनने पर उसका प्रीव्यू यहाँ दिखेगा।';return}objectUrl=URL.createObjectURL(f);$('preview').innerHTML='';if(f.type==='application/pdf'){const frame=document.createElement('iframe');frame.src=objectUrl;frame.title='PDF preview';$('preview').appendChild(frame)}else if(f.type.startsWith('image/')){const img=document.createElement('img');img.src=objectUrl;img.alt='चुनी हुई फोटो';$('preview').appendChild(img)}else{$('preview').textContent='इस फाइल का प्रीव्यू उपलब्ध नहीं है।'}});
+$('printBtn').addEventListener('click',()=>{const f=$('file').files[0];if(!f)return;if(f.type==='application/pdf'){const w=window.open(objectUrl,'_blank');if(!w){$('status').textContent='पॉप-अप ब्लॉक है; ब्राउज़र में PDF प्रीव्यू खोलकर प्रिंट करें।';return}w.addEventListener('load',()=>w.print())}else if(f.type.startsWith('image/')){const w=window.open('','_blank');if(!w){$('status').textContent='पॉप-अप ब्लॉक है; पॉप-अप की अनुमति दें।';return}w.document.write('<html><head><title>Photo Print</title><style>body{margin:0;text-align:center}img{max-width:100%;max-height:100vh}</style></head><body><img src="'+objectUrl+'" onload="window.print()"></body></html>');w.document.close()}else $('status').textContent='इस फाइल प्रकार के लिए प्रिंट प्रीव्यू उपलब्ध नहीं है।'});
+$('clearBtn').addEventListener('click',()=>{if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=null;$('file').value='';$('preview').textContent='फाइल चुनने पर उसका प्रीव्यू यहाँ दिखेगा।';$('status').textContent='इस ब्राउज़र से चुनी गई फाइल का लिंक हटा दिया गया।';$('printBtn').disabled=true});
+$('year').textContent=new Date().getFullYear();calc();
+</script>
+</body></html>
